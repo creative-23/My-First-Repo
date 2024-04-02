@@ -1,0 +1,123 @@
+.homenav button{
+    width: 6rem;
+    height: 2.5rem;
+    background-color: #4caf50;
+    border-radius: 2rem;
+    position: relative;
+    right: 4rem;
+   
+}
+.homenav button:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+section{
+    width: 60vw;
+    height: 216vh;
+    border: 2px solid rgba(133, 129, 129, 0.466);
+}
+
+aside{
+    width: 40vw;
+    height: 100vw;
+    border: 2px solid rgba(133, 129, 129, 0.466);
+}
+
+aside ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.refresh{
+    position: relative;
+    left: 2rem;
+    margin: 2rem;
+}
+
+#clearButton{
+    position: relative;
+    left: 1rem;
+    margin: 2rem;
+}
+
+.about{
+    position: relative;
+    left: 9rem;  
+}
+
+.login{
+    position: relative;
+    left: 22rem; 
+}
+
+.box1{
+
+    width: 22rem;
+    height: 22rem;
+    background-color: rgba(141, 139, 139, 0.171);
+    border-radius:1rem;
+    margin: 2rem;
+}
+
+.box2{
+
+    width: 22rem;
+    height: 30rem;
+    background-color: rgba(141, 139, 139, 0.171);
+    border-radius:1rem;
+    margin: 2rem;
+    position: relative;
+    left: 24rem;
+    bottom: 16rem;
+}
+
+.box3{
+
+    width: 22rem;
+    height: 30rem;
+    background-color: rgba(141, 139, 139, 0.171);
+    border-radius:1rem;
+    margin: 2rem;
+    position: relative;
+    bottom: 28rem;
+}
+
+.box4{
+
+    width: 22rem;
+    height: 15rem;
+    background-color: rgba(141, 139, 139, 0.171);
+    border-radius:1rem;
+    margin: 2rem;
+    position: relative;
+    bottom: 45rem;
+    left: 24rem;
+}
+
+.box5{
+
+    width: 45rem;
+    height: 15rem;
+    background-color: rgba(141, 139, 139, 0.171);
+    border-radius:1rem;
+    margin: 2rem;
+    position: relative;
+    bottom: 42rem;
+    left: .5rem;
+}
+
+.remove{
+    height: 1.5rem;
+    width: 5rem;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 1rem;
+}
+.remove:hover{
+   background-color: gray;
+}
+

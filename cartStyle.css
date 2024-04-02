@@ -1,0 +1,107 @@
+body{
+    background-color: black;
+    color: aliceblue;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+li img{
+    width: 10rem;
+    height: 14rem;
+    border-radius: 1.5rem;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+li p{
+    text-align: center;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 14px auto 10px auto;
+}
+
+.select{
+    width: 8rem;
+    height: 3rem;
+    
+}
+
+.container ul{
+    display: flex;
+    gap: 5rem;
+}
+
+.info{
+    border: 2px solid rgba(173, 170, 170, 0.288);
+    border-radius: 2rem;
+    background-color: rgb(20, 19, 19);
+   padding: 1.5rem;
+   height: 12rem;
+   text-align: center;
+   margin-right: 2rem; 
+}
+ 
+.type{
+    width: 13rem;
+    transform: translateX(3rem);
+    margin: 2.5rem 0;
+    border: 4px solid #2a2727;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.navbar{
+    padding: 0;
+    border: 1px solid #46464685;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.navbar button{
+    background-color: black;
+     border: 2px solid black;
+}
+
+.navbar h1{
+    position: relative;
+    left: 5rem;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.filter{
+    display: flex;
+    gap: 1rem;
+    font-size: 21px;
+    position: relative;
+    right: 3rem;
+}
+
+.filter svg{
+    position: relative;
+    top: 20px;
+}
+
+form{
+    display: flex;
+    position: relative;
+    left: 20rem;
+    gap: 3px;
+}
+
+form input{
+    border: none;
+    border-radius: 12px;
+    height: 27px;
+    padding-left: 29px;
+    outline: 3px solid rgba(153, 144, 144, 0.623);
+    background-color: rgba(161, 160, 160, 0.493);
+}

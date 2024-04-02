@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+
+    <link rel="stylesheet" href="cartStyle.css">
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="basicStyle.css">
+  </head>
+  <body>
+
+    <nav>
+
+      <div class="navbar homenav">
+        <h1>The Bookshelf</h1>
+        <button class="btn login">Login</button>
+        <button class="btn about">About</button>
+        <button class="nextPage" onclick="openNewWindow()">Add Books</button>
+      </div>
+
+    </nav>
+
+<div class="content" style="display: flex;">
+
+    <section>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+       <div class="box5"></div>
+    </section>
+
+    <aside>
+      <button id="clearButton" class="btn"> Remove ALL</button>
+      <button class = " btn refresh" onclick="location.reload()">Added Items</button>
+
+      <ul id = "myList"> </ul>
+    </aside>
+
+  </div>
+
+
+<script>
+              
+    const SavedArray = localStorage.getItem('SavedArray');
+    const finalArray = JSON.parse(SavedArray)
+    console.log(finalArray);
+
+               
+    finalArray.forEach(item => {
+      
+        const list = document.createElement('li');
+        const img = document.createElement('img');
+        const paragraph = document.createElement('p');
+
+        img.src = item.imageSrc ;
+        paragraph.textContent = item.textContent; 
+
+        const removebtn = document.createElement('button');
+        removebtn.classList.add('remove');
+        removebtn.innerHTML='remove'        
+
+        list.appendChild(img);
+        list.appendChild(paragraph);
+        list.appendChild(removebtn);
+
+        const ul = document.getElementById('myList');
+        ul.appendChild(list);
+
+    });
+
+  document.getElementById('clearButton')
+    .addEventListener('click', function() {        
+        localStorage.clear();
+        location.reload()       
+    });  
+
+
+  function openNewWindow() {
+      var url = "http://127.0.0.1:5500/cartPage.html"; 
+      window.open(url, "_blank");
+  }
+
+
+   document.querySelectorAll(".remove")
+      .forEach(function (remButton) {
+          remButton.addEventListener("click", function () {
+              const parentElement = remButton.parentNode;
+              const remtext = parentElement.childNodes[1];
+     
+              for(i=0;i<finalArray.length;i++){
+                  if(finalArray[i].textContent == remtext.textContent){
+                  finalArray.splice(i, 1);
+                  parentElement.remove();
+                  localStorage.setItem('SavedArray', JSON.stringify(finalArray));
+                   }
+              }
+          })
+      })
+
+</script>
+
+  </body>
+</html>
